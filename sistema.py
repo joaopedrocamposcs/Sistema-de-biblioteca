@@ -1,3 +1,4 @@
+
 from datetime import date, timedelta
 
 # Configurações da biblioteca
@@ -188,6 +189,54 @@ def listar_emprestimos():
         )
 
 
+# NOVA FUNÇÃO: CALCULAR MULTAS
+def calcular_multas():
+    print("\n--- CÁLCULO DE MULTAS ---")
+
+    if not emprestimos:
+        print("Nenhum empréstimo registrado.")
+        return
+
+    total_multas = 0.0
+
+    for emprestimo in emprestimos:
+        data_prevista = date.fromisoformat(
+            emprestimo["data_devolucao_prevista"]
+        )
+
+        # Se devolvido, utiliza a data real.
+        # Se ainda estiver emprestado, utiliza a data atual.
+        if emprestimo["devolvido"]:
+            data_final = date.fromisoformat(
+                emprestimo["data_devolucao_real"]
+            )
+        else:
+            data_final = date.today()
+
+        dias_atraso = max(
+            0, (data_final - data_prevista).days
+        )
+
+        multa = dias_atraso * MULTA_POR_DIA
+        total_multas += multa
+
+        status = (
+            "Devolvido"
+            if emprestimo["devolvido"]
+            else "Em aberto"
+        )
+
+        print(f"\nLivro: {emprestimo['titulo']}")
+        print(f"Usuário: {emprestimo['usuario']}")
+        print(f"Status: {status}")
+        print(f"Prazo de devolução: {data_prevista.strftime('%d/%m/%Y')}")
+        print(f"Dias de atraso: {dias_atraso}")
+        print(f"Multa calculada: R$ {multa:.2f}")
+
+    print("\n------------------------------")
+    print(f"TOTAL DE MULTAS: R$ {total_multas:.2f}")
+
+
 def menu():
     while True:
         print("\n=== BIBLIOTECA ===")
@@ -198,6 +247,7 @@ def menu():
         print("5 - Emprestar livro")
         print("6 - Devolver livro")
         print("7 - Listar empréstimos")
+        print("8 - Calcular multas")  # NOVA OPÇÃO
         print("0 - Sair")
 
         opcao = input("Escolha uma opção: ")
@@ -216,6 +266,8 @@ def menu():
             devolver_livro()
         elif opcao == "7":
             listar_emprestimos()
+        elif opcao == "8":
+            calcular_multas()  # CHAMA A NOVA FUNÇÃO
         elif opcao == "0":
             print("\nSistema encerrado.")
             break
