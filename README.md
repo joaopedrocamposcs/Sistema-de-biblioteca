@@ -96,7 +96,7 @@ Basta digitar o número correspondente à operação desejada.
 ## 📂 Estrutura do projeto
 
 biblioteca/
-├── main.py
+├── sistema.py
 └── README.md
 
 A estrutura acima é uma sugestão para organizar os arquivos do projeto.
