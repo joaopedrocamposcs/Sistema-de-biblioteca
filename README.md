@@ -1,12 +1,12 @@
-#📚 Sistema de Gerenciamento de Biblioteca
+# 📚 Sistema de Gerenciamento de Biblioteca
 
-##📝 Sobre o projeto
+## 📝 Sobre o projeto
 
 Este projeto consiste em um sistema de gerenciamento de biblioteca desenvolvido em Python, com o objetivo de facilitar o controle de livros, usuários, empréstimos, devoluções e multas por atraso.
 
 O sistema funciona por meio de um menu interativo no terminal, permitindo que o usuário escolha as operações desejadas de forma simples e organizada.
 
-##🚀 Funcionalidades
+## 🚀 Funcionalidades
 
 * Cadastro de usuários: permite cadastrar usuários com nome e e-mail, evitando e-mails duplicados.
 * Adição de livros: permite adicionar novos livros ao acervo, evitando títulos duplicados.
@@ -17,14 +17,14 @@ O sistema funciona por meio de um menu interativo no terminal, permitindo que o 
 * Listagem de empréstimos: apresenta os empréstimos registrados, suas datas e seus status.
 * Cálculo de multas: calcula as multas por atraso, considerando os empréstimos devolvidos e os que continuam em aberto.
 
-##🛠️ Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
 * Python 3
 * Módulo datetime
 * Estruturas de dados: listas e dicionários
 * Funções e estruturas de repetição e decisão
 
-##⚙️ Regras do sistema
+## ⚙️ Regras do sistema
 
 * O prazo de empréstimo é de 21 dias.
 * A multa por atraso é de R$ 2,00 por dia.
@@ -33,7 +33,7 @@ O sistema funciona por meio de um menu interativo no terminal, permitindo que o 
 * A devolução registra a data real e calcula a multa, quando aplicável.
 * O cálculo de multas considera os dias de atraso até a data atual para empréstimos ainda em aberto.
 
-##📖 Livros iniciais
+## 📖 Livros iniciais
 
 O sistema começa com 12 livros cadastrados, incluindo:
 
@@ -50,7 +50,7 @@ O sistema começa com 12 livros cadastrados, incluindo:
 * Vidas Secas — Graciliano Ramos
 * Capitães da Areia — Jorge Amado
 
-##💻 Como executar o projeto
+## 💻 Como executar o projeto
 
 Pré-requisitos
 
@@ -76,7 +76,7 @@ python3 main.py
 
     Observação: substitua main.py pelo nome real do arquivo que contém o código.
 
-##📋 Menu do sistema
+## 📋 Menu do sistema
 
 Ao executar o programa, será exibido o seguinte menu:
 
@@ -93,7 +93,7 @@ Ao executar o programa, será exibido o seguinte menu:
 
 Basta digitar o número correspondente à operação desejada.
 
-##📂 Estrutura do projeto
+## 📂 Estrutura do projeto
 
 biblioteca/
 ├── main.py
@@ -101,14 +101,14 @@ biblioteca/
 
 A estrutura acima é uma sugestão para organizar os arquivos do projeto.
 
-##⚠️ Limitações atuais
+## ⚠️ Limitações atuais
 
 * Os dados são armazenados em memória e são perdidos quando o programa é encerrado.
 * O sistema funciona apenas pelo terminal.
 * A identificação de usuários e livros é realizada por nome e título, respectivamente.
 * O sistema não possui banco de dados nem interface gráfica.
 
-##🔮 Melhorias futuras
+## 🔮 Melhorias futuras
 
 * Integrar um banco de dados, como SQLite ou MySQL.
 * Criar uma interface gráfica ou aplicação web.
@@ -117,11 +117,11 @@ A estrutura acima é uma sugestão para organizar os arquivos do projeto.
 * Permitir a consulta do histórico de cada usuário.
 * Adicionar testes automatizados.
 
-##🎯 Objetivo acadêmico
+## 🎯 Objetivo acadêmico
 
 O projeto tem como finalidade aplicar conceitos fundamentais de programação em Python, como funções, listas, dicionários, condicionais, laços de repetição, manipulação de datas e organização da lógica de um sistema.
 
-##👩‍💻 Autoria
+## 👩‍💻 Autoria
 
 Alunos
 * Marcela Geovana
